@@ -10,7 +10,8 @@ namespace BulkyBook.Models
     public class CoverType
     {
         [Key]
-        public int MyProperty { get; set; }
+        public int Id { get; set; }
+
         [Display(Name = "Cover Type")]
         [Required]
         [MaxLength(50)]
