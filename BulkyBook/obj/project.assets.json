@@ -9661,11 +9661,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\.NET6 Project\\Bulky\\BulkyBook.csproj",
+      "projectUniqueName": "D:\\.NET6 Project\\BulkyBook\\BulkyBook.csproj",
       "projectName": "BulkyBook",
-      "projectPath": "D:\\.NET6 Project\\Bulky\\BulkyBook.csproj",
+      "projectPath": "D:\\.NET6 Project\\BulkyBook\\BulkyBook.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "D:\\.NET6 Project\\Bulky\\obj\\",
+      "outputPath": "D:\\.NET6 Project\\BulkyBook\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",

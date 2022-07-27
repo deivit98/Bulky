@@ -534,3 +534,7 @@ D:\.NET6 Project\Bulky\bin\Debug\net6.0\BulkyBook.DataAccess.dll
 D:\.NET6 Project\Bulky\bin\Debug\net6.0\BulkyBook.Models.dll
 D:\.NET6 Project\Bulky\bin\Debug\net6.0\BulkyBook.DataAccess.pdb
 D:\.NET6 Project\Bulky\bin\Debug\net6.0\BulkyBook.Models.pdb
+D:\.NET6 Project\BulkyBook\bin\Debug\net6.0\BulkyBook.DataAccess.dll
+D:\.NET6 Project\BulkyBook\bin\Debug\net6.0\BulkyBook.Models.dll
+D:\.NET6 Project\BulkyBook\bin\Debug\net6.0\BulkyBook.DataAccess.pdb
+D:\.NET6 Project\BulkyBook\bin\Debug\net6.0\BulkyBook.Models.pdb
