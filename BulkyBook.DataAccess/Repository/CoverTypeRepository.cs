@@ -16,8 +16,6 @@ namespace BulkyBook.DataAccess.Repository
             this.db = db;
         }
 
-
-
         public void Update(CoverType coverType)
         {
             this.db.CoverTypes.Update(coverType);

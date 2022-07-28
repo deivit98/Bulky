@@ -17,8 +17,6 @@ namespace BulkyBook.DataAccess.Repository
             this.db = db;
         }
 
-       
-
         public void Update(Category category)
         {
             this.db.Update(category);
