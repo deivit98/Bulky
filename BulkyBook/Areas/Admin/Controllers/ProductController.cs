@@ -1,5 +1,6 @@
 ﻿using BulkyBook.DataAccess.Repository.IRepository;
 using BulkyBook.Models;
+using BulkyBook.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
@@ -25,45 +26,45 @@ namespace BulkyBook.Areas.Admin.Controllers
 
         public IActionResult Upsert(int? id)
         {
-            Product product = new();
-            IEnumerable<SelectListItem> CategoryList = this.unitOfWork.Category
-                .GetAll().Select(
-                a => new SelectListItem
+            ProductVM productVM = new()
+            {
+                Product = new(),
+                CategoryList = this.unitOfWork.Category.GetAll()
+                .Select(i=>new SelectListItem
                 {
-                    Text = a.Name,
-                    Value = a.Id.ToString(),
-
-                });
-            IEnumerable<SelectListItem> CoverTypeList = this.unitOfWork.CoverType
-                .GetAll().Select(
-                a => new SelectListItem
+                    Text = i.Name,
+                    Value = i.Id.ToString()
+                }),
+                CoverTypeList = this.unitOfWork.CoverType.GetAll()
+                .Select(i => new SelectListItem
                 {
-                    Text = a.Name,
-                    Value = a.Id.ToString(),
+                    Text = i.Name,
+                    Value = i.Id.ToString()
+                }),
 
-                });
+            };
 
             if (id == null || id == 0)
             {
-                ViewBag.CategoryList = CategoryList;
-                ViewData["CoverTypeList"] = CoverTypeList;
-                return View(product);
+                //ViewBag.CategoryList = CategoryList;
+               // ViewData["CoverTypeList"] = CoverTypeList;
+                return View(productVM);
             }
 
            
 
-            return View(product);
+            return View(productVM);
         }
 
         //POST
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Upsert(CoverType obj)
+        public IActionResult Upsert(ProductVM obj, IFormFile file)
         {
 
             if (ModelState.IsValid)
             {
-                unitOfWork.CoverType.Update(obj);
+                //unitOfWork.CoverType.Update(obj);
                 unitOfWork.Save();
                 TempData["success"] = "CoverType updated successfully";
                 return RedirectToAction("Index");
