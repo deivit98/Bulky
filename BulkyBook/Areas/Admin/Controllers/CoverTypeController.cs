@@ -31,15 +31,11 @@ namespace BulkyBook.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Create(CoverType obj)
         {
-
-            if (ModelState.IsValid)
-            {
-                unitOfWork.CoverType.Add(obj);
-                unitOfWork.Save();
-                TempData["success"] = "CoverType created successfully";
-                return RedirectToAction("Index");
-            }
-            return View(obj);
+            if (!ModelState.IsValid) return View(obj);
+            unitOfWork.CoverType.Add(obj);
+            unitOfWork.Save();
+            TempData["success"] = "CoverType created successfully";
+            return RedirectToAction("Index");
         }
 
         public IActionResult Edit(int? id)

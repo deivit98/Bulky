@@ -154,7 +154,7 @@ namespace BulkyBook.Areas.Admin.Controllers
 
             unitOfWork.Product.Remove(obj);
             unitOfWork.Save();
-            return Json(new {success=true, message="Delese Successful"});
+            return Json(new {success=true, message="Delete Successful"});
         }
         #endregion
     }
